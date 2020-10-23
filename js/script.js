@@ -3,15 +3,18 @@
 var listEl = document.getElementById("list");
 var buttonEl = document.getElementById("button");
 var positionEl = document.getElementById("position");
-  //lista cognomi
-var surnameList = ["Asdrubale", "Favagrossa", "Miscione", "Segapeli", "Occhionero", "Padella", "Brace", "Taik", "Zappa" ]
 
 //2) Inizializzazione Output: stampa elementi
 
 buttonEl.addEventListener("click", function () {
 
+   var surnameList = ["Asdrubale", "Favagrossa", "Miscione", "Segapeli", "Occhionero", "Padella", "Brace", "Taik", "Zappa" ];
+
+
+    listEl.innerHTML = '';
+
     var cognomeUtente = document.getElementById("name").value;
-    surnameList.push(nomeUtente);
+    surnameList.push(cognomeUtente);
     surnameList.sort();
 
     for (i = 0; i < surnameList.length; i++) {
@@ -22,4 +25,4 @@ buttonEl.addEventListener("click", function () {
 
     positionEl.innerHTML = "La Posizione del cognome è la numero:" + userPosition;
 
-})
+});
