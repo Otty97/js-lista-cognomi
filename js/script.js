@@ -1,11 +1,29 @@
 //1) Raccolta Input
 
-var cognomi = ["Asdrubale", "Favagrossa", "Piscione", "Segapeli", "Occhionero", "Padella", "Brace", "Taik", "Zappa" ]
+var listEl = document.getElementById("list");
+var buttonEl = document.getElementById("button");
+var positionEl = document.getElementById("position");
+  //lista cognomi
+var surnameList = ["Asdrubale", "Favagrossa", "Miscione", "Segapeli", "Occhionero", "Padella", "Brace", "Taik", "Zappa" ]
 
 //2) Logica: elaborazione dati
 
-cognomi.push(cognomiUtenti);
-cognomi.sort();
-
+surnameList.push(cognomeUtente);
+surnameList.sort();
 
 //3) Inizializzazione Output: stampa elementi
+buttonEl.addEventListener("click", function () {
+  if (surnameList.length < 8) {
+    alert("COGNOME GIA PRESENTE NEL DATABASE");
+  } else {
+    var cognomeUtente = document.getElementById("name").value;
+    surnameList.push(nomeUtente);
+    surnameList.sort();
+
+    for (i = 0; i < surnameList.length; i++) {
+      listEl.innerHTML += "<li>" + surnameList[i] + "</li>";
+    } var userPosition = 1 + surnameList.prototype.indexOf(cognomeUtente);
+
+    positionEl.innerHTML = "La Posizione del cognome è la numero:" + userPosition;
+  }
+});
