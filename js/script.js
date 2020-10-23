@@ -12,18 +12,22 @@ surnameList.push(cognomeUtente);
 surnameList.sort();
 
 //3) Inizializzazione Output: stampa elementi
+
 buttonEl.addEventListener("click", function () {
-  if (surnameList.length < 8) {
-    alert("COGNOME GIA PRESENTE NEL DATABASE");
-  } else {
+
     var cognomeUtente = document.getElementById("name").value;
-    surnameList.push(nomeUtente);
-    surnameList.sort();
+      surnameList.push(nomeUtente);
+      surnameList.sort();
+
+      for (i = 0; i < surnameList.length; i++) {
+        listEl.innerHTML += "<li>" + surnameList[i] + "</li>";
 
     for (i = 0; i < surnameList.length; i++) {
       listEl.innerHTML += "<li>" + surnameList[i] + "</li>";
-    } var userPosition = 1 + surnameList.prototype.indexOf(cognomeUtente);
+    }
+
+    var userPosition = 1 + surnameList.indexOf(cognomeUtente);
 
     positionEl.innerHTML = "La Posizione del cognome è la numero:" + userPosition;
-  }
+
 });
